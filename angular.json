@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "myApp": {
+    "demo-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "myApp:build:production"
+              "buildTarget": "demo-app:build:production"
             },
             "development": {
-              "buildTarget": "myApp:build:development"
+              "buildTarget": "demo-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "myApp:build"
+            "buildTarget": "demo-app:build"
           }
         },
         "test": {
