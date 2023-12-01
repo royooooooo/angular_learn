@@ -1,6 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-interface Product {
+export interface Product {
+  id: number;
   name: String;
   size: number;
 }
@@ -9,7 +11,9 @@ interface Product {
   selector: 'product-item',
   standalone: true,
   templateUrl: './product-item.component.html',
+  imports: [CommonModule],
 })
 export class ProductItem {
   @Input() product?: Product;
+  @Output() remove = new EventEmitter<number>();
 }
