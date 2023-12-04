@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 export interface Product {
   id: number;
@@ -11,7 +12,7 @@ export interface Product {
   selector: 'product-item',
   standalone: true,
   templateUrl: './product-item.component.html',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
 })
 export class ProductItem {
   @Input() product?: Product;

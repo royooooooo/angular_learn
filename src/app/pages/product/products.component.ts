@@ -4,12 +4,13 @@ import {
   Product,
   ProductItem,
 } from '../../components/product/product-item.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './products.component.html',
-  imports: [ProductItem, CommonModule],
+  imports: [ProductItem, CommonModule, RouterOutlet],
 })
 export class Products {
   onRemove = (id: number) => {

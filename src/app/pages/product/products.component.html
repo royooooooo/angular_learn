@@ -3,3 +3,4 @@
 <div *ngFor="let product of products">
   <product-item [product]="product" (remove)="onRemove($event)" />
 </div>
+<router-outlet></router-outlet>

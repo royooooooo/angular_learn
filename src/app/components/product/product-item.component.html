@@ -1,5 +1,10 @@
 <div>{{ product?.id }}</div>
-<div>{{ product?.name }}</div>
+<a
+  [title]="product?.name + ' details'"
+  [routerLink]="['/products', product?.id]"
+>
+  {{ product?.name }}
+</a>
 <div>{{ product?.size }}</div>
 <div *ngIf="product && product.id">
   <button type="button" (click)="remove.emit(product.id)">remove it</button>
