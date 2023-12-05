@@ -14,10 +14,11 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductDetailsComponent implements OnInit {
   product?: Product;
+
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService,
-    private logger: Logger
+    private logger: Logger,
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +29,6 @@ export class ProductDetailsComponent implements OnInit {
   addToCart = (product: Product) => {
     this.cartService.addToCart(product);
     this.logger.log(`put product ${product.id} to cart`);
-    window.alert('Your product has been added to the cart!')
+    window.alert('Your product has been added to the cart!');
   };
 }

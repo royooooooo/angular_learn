@@ -10,13 +10,20 @@ export const routes: Routes = [
     path: 'products/:productId',
     loadComponent: () =>
       import('./pages/product-details/product-details.component').then(
-        (m) => m.ProductDetailsComponent
+        (m) => m.ProductDetailsComponent,
       ),
   },
   {
     path: 'cart',
     loadComponent: () =>
       import('./pages/cart/cart.component').then((m) => m.CartComponent),
+  },
+  {
+    path: 'shipping',
+    loadComponent: () =>
+      import('./pages/shipping/shipping.component').then(
+        (m) => m.ShippingComponent,
+      ),
   },
   {
     path: '',
