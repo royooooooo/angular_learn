@@ -1,1 +1,8 @@
-<p>product-details works!</p>
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+  <h4>{{ product.id }}</h4>
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.size }}</p>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+</div>

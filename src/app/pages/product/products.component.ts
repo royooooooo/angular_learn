@@ -5,6 +5,7 @@ import {
   ProductItem,
 } from '../../components/product/product-item.component';
 import { RouterOutlet } from '@angular/router';
+import { products } from '../../data/products';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +14,8 @@ import { RouterOutlet } from '@angular/router';
   imports: [ProductItem, CommonModule, RouterOutlet],
 })
 export class Products {
+  products: Product[] = [...products];
   onRemove = (id: number) => {
     this.products = this.products.filter((product) => product.id !== id);
   };
-
-  products: Product[] = [
-    { id: 1, name: 'product 1', size: 10 },
-    { id: 2, name: 'product 2', size: 10 },
-  ];
 }
